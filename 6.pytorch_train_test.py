@@ -86,7 +86,7 @@ for e in range(epochs):
         log_ps = model(images)
 
         # calculate the loss
-        test_loss = criterion(log_ps,labels)
+        test_loss += criterion(log_ps,labels)
 
         # Since our model outputs a LogSoftmax, find the real 
         # percentages by reversing the log function
